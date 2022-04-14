@@ -3,7 +3,6 @@
     <div class="modalWrap" v-if="modal">
       <div class="modalContent">
         <div @click="closeModal()" class="modalClose">
-          <font-awesome-icon icon="times-circle" />
         </div>
         <div class="headline center">Confirm delete</div>
         <div class="middle">

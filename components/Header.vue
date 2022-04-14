@@ -3,12 +3,10 @@
     <div class="headerContent">
       <div class="logo">
         <nuxt-link to="/">
-          <font-awesome-icon icon="comment-alt" />
           <span>BlogX</span>
         </nuxt-link>
       </div>
       <a href="#" class="mobileMenuBtn" @click="openMobileMenu">
-        <font-awesome-icon icon="bars" />
       </a>
     </div>
     <ul :class="{ openMenu: menuList }">

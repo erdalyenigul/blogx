@@ -1,0 +1,185 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {box-sizing: border-box; transition: all .3s ease; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;}
+a{text-decoration:none;}
+strong{font-weight:600;}
+em{font-style:italic;}
+
+body{font-family: 'Poppins', sans-serif!important;}
+
+.page-enter-active,
+.page-leave-active {
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+  transition-duration: 500ms;
+}
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.button{border:0; float:left; padding:0 20px; font-size:14px; border-radius:5px; margin-right:15px; cursor: pointer; outline:0; height: 40px; display: flex; align-items: center; justify-content: center; font-weight: 600;
+  &:nth-last-child(1){margin-right:0;}
+}
+.primaryBtn{background-color:#6d6dde; color:#fff;}
+.secondaryBtn{background-color:#6c757d; color:#fff;}
+.errorBtn{background-color:#9e1333; color:#fff;}
+.successBtn{background-color:#28a745; color:#fff;}
+.button{border:0; float:left; padding:0 20px; font-size:14px; border-radius:5px; margin-right:15px; cursor: pointer; outline:0; height: 40px; display: flex; align-items: center; justify-content: center;}
+
+.containerAll{display:flex; align-items:flex-start; justify-content:center; flex-wrap:wrap; width:100%; min-height:calc(100vh); background-color:#f1f2f7;
+  .container{max-width:1100px; width:100%; min-height:calc(100vh); background-color:#fff; box-shadow:0 0 20px rgba(0, 0, 0, 0.05);}
+  .content{padding:40px; float:left; width:100%; min-height: calc(100vh - 308px);}
+  .headline{float:left; width:100%; margin-bottom:20px; font-size:20px; font-weight:600; text-align: left;
+    &.center{text-align: center;}
+  }
+  .adminInfo{display:flex; align-items:center; justify-content:space-between; width:100%; margin-bottom:20px; font-size:14px;
+    .welcome{
+      span{font-weight:600;}
+    }
+    .newPost{background-color: #6d6dde; padding: 10px 15px; border-radius: 6px; color: #fff; font-weight: 600; font-size: 13px;}
+  }
+  .header{float:left; width:100%; background-color:#6d6dde; display:flex; align-items:center; justify-content: space-between; margin-bottom:40px; 
+    .headerContent{background-color:#6d6dde; display:flex; align-items:center; justify-content: space-between; width:30%; height:80px; z-index:2; padding-left:40px;
+      .logo{float:left;
+        a{display: flex; align-items: flex-end; font-size:32px; color:#fff;}
+        svg{padding-top:3px;}
+        span{font-size:34px; font-weight:600; color:#fff;}
+      }
+      .mobileMenuBtn{display:none; font-size:30px; color: #fff; float: right; padding-top:3px;}
+    }
+    ul{float:left; width:70%; display: flex; justify-content: flex-end; z-index:1; padding-right:30px;
+      li{float:left; margin-right:15px;
+        a{padding:10px 20px; background-color:#5858bf; color:#fff; font-size:14px; border-radius: 5px; display:block; font-weight: 600;}
+      }
+    }
+  }
+  .footer{float:left; width:100%; background-color:#333; padding:40px 30px; display:flex;; align-items:center; justify-content: center; flex-direction: column; box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3); margin-top:50px;
+    span{width:100%; font-size:14px; margin-bottom:15px; text-align: center; color:#fff; letter-spacing:1px;
+      a{display:block; color:#fff; font-weight:700;}
+    }
+  }
+  .loginForm{float:left; width:100%; display:flex; align-items:center; flex-direction: column;
+    div{float:left; width:400px; margin-bottom:20px;
+      input{float:left; width:100%; outline:0; border:1px solid #ddd; padding:20px; font-size:18px;}
+    }
+    button{width:400px; height:60px; background: #6d6dde; color: #fff; font-size: 18px;}
+  }
+  .error{color:red; width: 100%; padding: 20px 0; line-height:28px; width:400px;}
+  .posts{float:left; width:100%; margin-bottom:30px; border-bottom: 1px solid #ddd; padding-bottom:30px;
+    &.postDetail{background-color:#fff; padding:0;}
+    .imgCover{float:left; width:300px; height:168px; overflow:hidden;
+      a{float:left; width:100%;}
+      img{width:100%; min-height:168px;}
+    }
+    .Infos{float:left; width:calc(100% - 300px); padding-left:20px;}
+    .postDate{float: left; width: 100%; font-size:14px; line-height: 16px; margin-bottom:10px;}
+    .postName{float: left; width: 100%; font-weight: 600; font-size:20px; line-height: 26px; margin-bottom:10px; color:#222;
+    }
+    .postInfo{float: left; width: 100%; font-weight: 400; margin-bottom:20px;
+      p{float:left; width:100%; font-size:14px; line-height:24px;}
+      img{max-width:100%;}
+      iframe{width:100%!important;}
+      h2{font-size:14px; line-height:22px;}
+    }
+    .infoList{
+      .postName{max-height:52px; overflow:hidden;}
+      .postInfo{margin-bottom:10px;
+        p{width:auto; font-size:14px; line-height: 20px;}
+      }
+    }
+    
+    .detailImgCover{float:left; width:100%; margin-bottom:20px;
+      img{width:100%;}
+    }
+    &:nth-last-child(1){border-bottom:0; margin-bottom:0; padding-bottom:0;}
+  }
+  .newPostForm{float:left; width:100%; margin-bottom:20px;
+    .nameInput{float:left; width:100%; margin-bottom:20px;;
+      input{float:left; width:100%; outline:0; padding:10px 15px; font-size:18px; border:1px solid #ddd;}
+    }
+  }
+  .editorWrap{float:left; width:100%; margin-bottom:20px;
+    .ql-toolbar{float:left; width:100%;}
+    .ql-container{float:left; width:100%; height:700px!important;}
+  }
+  .adminLine{float:left; width:100%; margin-bottom:20px;}
+  .fileUploadInput{display:none;}
+  .coverImg{float:left; width:100%; margin-right:20px; margin-bottom:20px;
+    img{float:left; width:100%; margin-top:20px;}
+    .loading{
+      img{width:50px; margin:0;}
+    }
+  }
+  .modalWrap{position:fixed; left:0; right:0; top:0; bottom:0; width:100%; height:100%; background:rgba(0, 0, 0, 0.8); display:flex; align-items:center; justify-content:center; z-index:3;
+    .modalContent{width:600px; max-height:500px; background-color:#fff; padding:30px; border-radius:10px; position:relative;
+      .modalClose{position:absolute; right:20px; top:20px; font-size:28px; color:#222; cursor:pointer;}
+      .headline{float:left; width:100%; margin-bottom:20px; font-size:18px; font-weight:600;
+        &.center{text-align:center;}
+      }
+      .middle{float:left; width:100%; display:flex; align-items: center; justify-content:center;}
+    }
+  }
+  .loading{float:left; width:100%; padding:10px 0;}
+}
+
+@media (max-width: 1023px) {
+
+}
+
+@media (max-width: 767px) {
+  .containerAll .content{padding:0 30px;}
+  .containerAll .loginForm div, .containerAll .loginForm button{width:100%;}
+  .containerAll .header{position:relative; margin-bottom:20px; justify-content: space-between; flex-direction: row; align-items: center;}
+  .containerAll .header ul{position:absolute; right:0; top:80px; flex-direction: column; margin-top:-1000px; width:100%; padding-right:0;
+    &.openMenu{margin-top:0;}
+  }
+  .containerAll .header ul li{width:100%; border-bottom: 1px solid #6262c3; font-size: 16px; font-weight: 600;}
+  .containerAll .header ul li a{border-radius: 0; padding: 20px;}
+  .containerAll .header .headerContent .mobileMenuBtn{display:block;}
+  .containerAll .header .headerContent{width:100%; padding:0 30px;}
+  .containerAll .posts .imgCover{width:100%; margin-bottom:20px;}
+  .containerAll .posts .Infos{width:100%; padding:0}
+}

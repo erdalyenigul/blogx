@@ -1,0 +1,28 @@
+{
+  "name": "blogx",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "cookieparser": "^0.1.0",
+    "core-js": "^3.15.1",
+    "firebase": "^8.3.1",
+    "js-cookie": "^3.0.1",
+    "jwt-decode": "^3.1.2",
+    "nuxt": "^2.15.7",
+    "vue-quill-editor": "^3.0.6",
+    "webpack": "^4.46.0"
+  },
+  "devDependencies": {
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
+    "sass": "^1.50.0",
+    "sass-loader": "^10.2.1"
+  }
+}

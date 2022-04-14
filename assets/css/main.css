@@ -1,0 +1,698 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+.page-enter-active,
+.page-leave-active {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+.button {
+  border: 0;
+  float: left;
+  padding: 0 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-right: 15px;
+  cursor: pointer;
+  outline: 0;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+}
+
+.button:nth-last-child(1) {
+  margin-right: 0;
+}
+
+.primaryBtn {
+  background-color: #6d6dde;
+  color: #fff;
+}
+
+.secondaryBtn {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.errorBtn {
+  background-color: #9e1333;
+  color: #fff;
+}
+
+.successBtn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.button {
+  border: 0;
+  float: left;
+  padding: 0 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-right: 15px;
+  cursor: pointer;
+  outline: 0;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.containerAll {
+  float: left;
+  width: 100%;
+  min-height: calc(100vh);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #f1f2f7;
+}
+
+.containerAll .container {
+  max-width: 900px;
+  width: 100%;
+  min-height: calc(100vh);
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.containerAll .content {
+  padding: 0 40px;
+  float: left;
+  width: 100%;
+  min-height: calc(100vh - 308px);
+}
+
+.containerAll .headline {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.containerAll .headline.center {
+  text-align: center;
+}
+
+.containerAll .adminInfo {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.containerAll .adminInfo span {
+  font-weight: 600;
+}
+
+.containerAll .header {
+  float: left;
+  width: 100%;
+  background-color: #6d6dde;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.containerAll .header .headerContent {
+  background-color: #6d6dde;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 30%;
+  height: 80px;
+  z-index: 2;
+  padding-left: 40px;
+}
+
+.containerAll .header .headerContent .logo {
+  float: left;
+}
+
+.containerAll .header .headerContent .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 32px;
+  color: #fff;
+}
+
+.containerAll .header .headerContent .logo svg {
+  padding-top: 3px;
+}
+
+.containerAll .header .headerContent .logo span {
+  font-size: 34px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.containerAll .header .headerContent .mobileMenuBtn {
+  display: none;
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  padding-top: 3px;
+}
+
+.containerAll .header ul {
+  float: left;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  z-index: 1;
+  padding-right: 30px;
+}
+
+.containerAll .header ul li {
+  float: left;
+  margin-right: 15px;
+}
+
+.containerAll .header ul li a {
+  padding: 10px 20px;
+  background-color: #5858bf;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+  display: block;
+  font-weight: 600;
+}
+
+.containerAll .footer {
+  float: left;
+  width: 100%;
+  background-color: #333;
+  padding: 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 50px;
+}
+
+.containerAll .footer span {
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.containerAll .footer span a {
+  display: block;
+  color: #fff;
+  font-weight: 700;
+}
+
+.containerAll .loginForm {
+  float: left;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.containerAll .loginForm div {
+  float: left;
+  width: 400px;
+  margin-bottom: 20px;
+}
+
+.containerAll .loginForm div input {
+  float: left;
+  width: 100%;
+  outline: 0;
+  border: 1px solid #ddd;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.containerAll .loginForm button {
+  width: 400px;
+  height: 60px;
+  background: #6d6dde;
+  color: #fff;
+  font-size: 18px;
+}
+
+.containerAll .error {
+  color: red;
+  width: 100%;
+  padding: 20px 0;
+  line-height: 28px;
+  width: 400px;
+}
+
+.containerAll .posts {
+  float: left;
+  width: 100%;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+}
+
+.containerAll .posts.postDetail {
+  background-color: #fff;
+  padding: 0;
+}
+
+.containerAll .posts .imgCover {
+  float: left;
+  width: 300px;
+  height: 168px;
+  overflow: hidden;
+}
+
+.containerAll .posts .imgCover a {
+  float: left;
+  width: 100%;
+}
+
+.containerAll .posts .imgCover img {
+  width: 100%;
+  min-height: 168px;
+}
+
+.containerAll .posts .Infos {
+  float: left;
+  width: calc(100% - 300px);
+  padding-left: 20px;
+}
+
+.containerAll .posts .postDate {
+  float: left;
+  width: 100%;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  margin-bottom: 5px;
+}
+
+.containerAll .posts .postName {
+  float: left;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 5px;
+  color: #222;
+}
+
+.containerAll .posts .postInfo {
+  float: left;
+  width: 100%;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.containerAll .posts .postInfo p {
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.containerAll .posts .postInfo img {
+  max-width: 100%;
+}
+
+.containerAll .posts .postInfo iframe {
+  width: 100% !important;
+}
+
+.containerAll .posts .infoList .postName {
+  max-height: 52px;
+  overflow: hidden;
+}
+
+.containerAll .posts .infoList .postInfo {
+  margin-bottom: 10px;
+}
+
+.containerAll .posts .infoList .postInfo p {
+  width: auto;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.containerAll .posts .detailImgCover {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.containerAll .posts .detailImgCover img {
+  width: 100%;
+}
+
+.containerAll .posts:nth-last-child(1) {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.containerAll .newPostForm {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.containerAll .newPostForm .nameInput {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.containerAll .newPostForm .nameInput input {
+  float: left;
+  width: 100%;
+  outline: 0;
+  padding: 10px 15px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+}
+
+.containerAll .editorWrap {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.containerAll .editorWrap .ql-toolbar {
+  float: left;
+  width: 100%;
+}
+
+.containerAll .editorWrap .ql-container {
+  float: left;
+  width: 100%;
+  height: 700px !important;
+}
+
+.containerAll .adminLine {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.containerAll .fileUploadInput {
+  display: none;
+}
+
+.containerAll .coverImg {
+  float: left;
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.containerAll .coverImg img {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.containerAll .coverImg .loading img {
+  width: 50px;
+  margin: 0;
+}
+
+.containerAll .modalWrap {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 3;
+}
+
+.containerAll .modalWrap .modalContent {
+  width: 600px;
+  max-height: 500px;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.containerAll .modalWrap .modalContent .modalClose {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 28px;
+  color: #222;
+  cursor: pointer;
+}
+
+.containerAll .modalWrap .modalContent .headline {
+  float: left;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.containerAll .modalWrap .modalContent .headline.center {
+  text-align: center;
+}
+
+.containerAll .modalWrap .modalContent .middle {
+  float: left;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.containerAll .loading {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+}
+
+@media (max-width: 767px) {
+  .containerAll .content {
+    padding: 0 30px;
+  }
+  .containerAll .loginForm div, .containerAll .loginForm button {
+    width: 100%;
+  }
+  .containerAll .header {
+    position: relative;
+    margin-bottom: 20px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .containerAll .header ul {
+    position: absolute;
+    right: 0;
+    top: 80px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: -1000px;
+    width: 100%;
+    padding-right: 0;
+  }
+  .containerAll .header ul.openMenu {
+    margin-top: 0;
+  }
+  .containerAll .header ul li {
+    width: 100%;
+    border-bottom: 1px solid #6262c3;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .containerAll .header ul li a {
+    border-radius: 0;
+    padding: 20px;
+  }
+  .containerAll .header .headerContent .mobileMenuBtn {
+    display: block;
+  }
+  .containerAll .header .headerContent {
+    width: 100%;
+    padding: 0 30px;
+  }
+  .containerAll .posts .imgCover {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .containerAll .posts .Infos {
+    width: 100%;
+    padding: 0;
+  }
+}

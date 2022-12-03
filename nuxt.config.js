@@ -18,7 +18,7 @@ export default {
 
   loading: { color: '#5858bf', height:'10px' },
   css: [
-    '@/assets/css/main.scss',
+    '@/assets/css/main.css',
     'quill/dist/quill.snow.css',
     'quill/dist/quill.bubble.css',
     'quill/dist/quill.core.css',

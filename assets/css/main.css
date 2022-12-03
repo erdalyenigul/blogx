@@ -169,10 +169,11 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #f1f2f7;
+  flex-wrap: wrap;
 }
 
 .containerAll .container {
-  max-width: 900px;
+  max-width: 1400px;
   width: 100%;
   min-height: calc(100vh);
   background-color: #fff;
@@ -181,7 +182,7 @@ body {
 }
 
 .containerAll .content {
-  padding: 0 40px;
+  padding:40px;
   float: left;
   width: 100%;
   min-height: calc(100vh - 308px);
@@ -224,7 +225,6 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 40px;
 }
 
 .containerAll .header .headerContent {
@@ -636,7 +636,7 @@ body {
 
 @media (max-width: 767px) {
   .containerAll .content {
-    padding: 0 30px;
+    padding: 30px;
   }
   .containerAll .loginForm div, .containerAll .loginForm button {
     width: 100%;
